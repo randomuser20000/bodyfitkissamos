@@ -535,53 +535,44 @@ button { cursor: pointer; border: none; font: inherit; }
   border-top: 2px solid var(--surface-variant);
 }
 .price-table-wrap {
-  max-width: 560px;
+  max-width: 480px;
   margin-inline: auto;
+  background: var(--surface-container-high);
+  border: 1px solid var(--surface-variant);
+  padding: 8px 0;
 }
 .price-table {
   width: 100%;
   border-collapse: collapse;
 }
-.price-table th {
+.price-table td {
   font-family: var(--font-headline);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--on-surface-variant);
-  padding: 12px 16px;
-  border-bottom: 2px solid var(--surface-variant);
-  text-align: left;
-}
-.price-table th:last-child { text-align: right; }
-.price-table td {
-  font-family: var(--font-body);
-  font-size: 18px;
   color: var(--on-surface);
-  padding: 16px;
+  padding: 14px 24px;
   border-bottom: 1px solid var(--surface-variant);
 }
+.price-table tr:last-child td { border-bottom: none; }
 .price-table td:last-child {
   text-align: right;
-  font-family: var(--font-headline);
   font-weight: 900;
-  font-size: 22px;
+  font-size: 20px;
   color: var(--primary-fixed);
   white-space: nowrap;
 }
 .price-row--featured {
-  background: rgba(195,244,0,0.05);
-}
-.price-row--featured td {
-  border-bottom: 1px solid rgba(195,244,0,0.2);
+  background: rgba(195,244,0,0.06);
 }
 .price-tag {
   display: inline-block;
-  font-size: 10px;
+  font-family: var(--font-body);
+  font-size: 9px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  padding: 2px 8px;
+  padding: 2px 6px;
   border: 1px solid var(--surface-variant);
   color: var(--on-surface-variant);
   vertical-align: middle;
@@ -659,7 +650,7 @@ button { cursor: pointer; border: none; font: inherit; }
 .fuel-card-gradient {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, var(--surface-container-high), transparent);
+  background: linear-gradient(to bottom, var(--surface-container-high) 30%, transparent);
   z-index: 1;
 }
 .fuel-card-content {
@@ -668,7 +659,7 @@ button { cursor: pointer; border: none; font: inherit; }
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 /* ── Footer ── */
@@ -772,7 +763,6 @@ button { cursor: pointer; border: none; font: inherit; }
       <li><a href="#pricing">Pricing</a></li>
       <li><a href="#info">Info</a></li>
       <li><a href="#faq">FAQ</a></li>
-      <li><a href="#contact">Contact</a></li>
     </ul>
     <div style="display:flex;align-items:center;gap:16px;">
       <a href="#pricing" class="btn-primary" style="font-size:14px;">Join Now</a>
@@ -786,7 +776,6 @@ button { cursor: pointer; border: none; font: inherit; }
     <a href="#pricing">Pricing</a>
     <a href="#info">Info</a>
     <a href="#faq">FAQ</a>
-    <a href="#contact">Contact</a>
   </div>
 </nav>
 
@@ -854,12 +843,6 @@ button { cursor: pointer; border: none; font: inherit; }
     <h2 class="headline-lg section-title">Access Plans</h2>
     <div class="price-table-wrap">
       <table class="price-table">
-        <thead>
-          <tr>
-            <th>Plan</th>
-            <th>Price</th>
-          </tr>
-        </thead>
         <tbody>
           <tr>
             <td>Day Pass</td>
@@ -931,8 +914,7 @@ button { cursor: pointer; border: none; font: inherit; }
       <div class="fuel-card-gradient"></div>
       <img class="fuel-card-bg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjL-h8PcpLz_wSafTvGUNubeke5BQaZW5iiWno8K4k7DvdT3-Z-L2cv2-7gSi8ioOsG3C6i2zdLQhMR7xN7hhT5S7-okaJ-JG94brMTgMfqw9iTdZi0CdQxNNcxUdJAL6zKxKjft2VSel_aEt3pD7WzGAXWv4repPAUGQvlCbY3FOn64s_lQHJllZdw8FCfiwLDcowgQnCGPyArgcorwekeu46zhiqVdgcVHBflXxjP-S8aH5SMyHunc_FnV74TNyxyOnQFmcwQo0b" alt="Supplement station at Bodyfit Kissamos" width="800" height="600" loading="lazy">
       <div class="fuel-card-content" style="padding:32px;">
-        <span class="material-symbols-outlined" style="color:var(--primary-fixed);font-size:36px;margin-bottom:16px;">local_drink</span>
-        <h2 class="headline-md" style="color:var(--primary);margin-bottom:8px;">Fuel Station</h2>
+        <h2 class="headline-md section-title" style="margin-bottom:32px;">Fuel Station</h2>
         <p class="body-lg" style="color:var(--on-surface-variant);max-width:380px;">Running low? We stock a selection of premium whey, pre-workouts, and BCAAs on-site. Grab what you need at the desk.</p>
       </div>
     </div>
@@ -963,7 +945,7 @@ button { cursor: pointer; border: none; font: inherit; }
   </div>
 </section>
 
-<footer class="footer" id="contact">
+<footer class="footer">
   <div class="container footer-inner">
     <div class="nav-logo">Bodyfit Kissamos</div>
     <ul class="footer-links">
