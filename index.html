@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bodyfit Kissamos — Old-School Bodybuilding Gym in Chania, Crete</title>
-<meta name="description" content="Bodyfit Kissamos is an authentic bodybuilding gym in Kissamos, Chania, Crete, Greece. Day pass €10, weekly €35, monthly €55. Air-conditioned, fully equipped with free weights and machines. Open Mon–Sat.">
+<meta name="description" content="Bodyfit Kissamos is an authentic bodybuilding gym in Kissamos, Chania, Crete, Greece. Day pass €5, weekly €25, monthly €40. Air-conditioned, fully equipped with free weights and machines. Open Mon–Sat.">
 
 <!-- GEO: Open Graph for AI and social parsers -->
 <meta property="og:title" content="Bodyfit Kissamos — Old-School Bodybuilding Gym in Chania, Crete">
-<meta property="og:description" content="Authentic bodybuilding gym in Kissamos, Chania, Crete. Day pass €10, weekly €35, monthly €55. Free weights, machines, air conditioning, supplements on-site.">
+<meta property="og:description" content="Authentic bodybuilding gym in Kissamos, Chania, Crete. Day pass €5, weekly €25, monthly €40. Free weights, machines, air conditioning, supplements on-site.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Bodyfit Kissamos">
@@ -61,7 +61,7 @@
       "closes": "21:00"
     }
   ],
-  "priceRange": "€10 - €55",
+  "priceRange": "€5 - €390",
   "currenciesAccepted": "EUR",
   "paymentAccepted": "Cash, Credit Card, NFC",
   "hasOfferCatalog": {
@@ -71,22 +71,50 @@
       {
         "@type": "Offer",
         "name": "Day Pass",
-        "description": "Single-day full floor access with free weights and machines",
-        "price": "10",
+        "description": "Single-day full floor access",
+        "price": "5",
         "priceCurrency": "EUR"
       },
       {
         "@type": "Offer",
         "name": "Weekly Pass",
-        "description": "7 consecutive days of unlimited gym access with locker usage, ideal for travelers visiting Crete",
-        "price": "35",
+        "description": "7 consecutive days of unlimited gym access with locker usage",
+        "price": "25",
         "priceCurrency": "EUR"
       },
       {
         "@type": "Offer",
         "name": "Monthly Membership",
-        "description": "Unlimited monthly gym access with priority support and nutrition advice",
-        "price": "55",
+        "description": "Unlimited monthly gym access",
+        "price": "40",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "name": "2-Month Pass",
+        "description": "Unlimited access for two months",
+        "price": "70",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "name": "3-Month Pass",
+        "description": "Unlimited access for three months",
+        "price": "100",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "name": "6-Month Pass",
+        "description": "Unlimited access for six months",
+        "price": "190",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "name": "Annual Membership",
+        "description": "Unlimited access for one year",
+        "price": "390",
         "priceCurrency": "EUR"
       }
     ]
@@ -120,7 +148,7 @@
       "name": "How much does a gym pass cost?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A single day pass costs €10 with full floor access. Weekly passes are €35 (7 consecutive days with locker usage), and monthly memberships cost €55 with unlimited access and nutrition advice. All major cards and NFC payments accepted."
+        "text": "A day pass costs €5 with full floor access. Weekly passes are €25 (7 consecutive days), monthly memberships €40, and annual memberships €390 for the best value. Longer plans available: 2 months €70, 3 months €100, 6 months €190. Cash, cards, and NFC payments accepted at the desk."
       }
     },
     {
@@ -136,7 +164,7 @@
       "name": "Is Bodyfit Kissamos good for tourists?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, Bodyfit Kissamos is ideal for travelers visiting Crete who want to maintain their training routine. The popular weekly pass (€35) is designed specifically for tourists, offering 7 consecutive days of access with locker usage."
+        "text": "Yes, Bodyfit Kissamos is ideal for travelers visiting Crete who want to maintain their training routine. The weekly pass (€25) is designed specifically for tourists, offering 7 consecutive days of full access."
       }
     }
   ]
@@ -506,60 +534,64 @@ button { cursor: pointer; border: none; font: inherit; }
   background: var(--surface-container-low);
   border-top: 2px solid var(--surface-variant);
 }
-.price-card {
-  background: var(--surface-container-high);
+.price-table-wrap {
+  max-width: 560px;
+  margin-inline: auto;
+}
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.price-table th {
+  font-family: var(--font-headline);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--on-surface-variant);
+  padding: 12px 16px;
+  border-bottom: 2px solid var(--surface-variant);
+  text-align: left;
+}
+.price-table th:last-child { text-align: right; }
+.price-table td {
+  font-family: var(--font-body);
+  font-size: 18px;
+  color: var(--on-surface);
+  padding: 16px;
+  border-bottom: 1px solid var(--surface-variant);
+}
+.price-table td:last-child {
+  text-align: right;
+  font-family: var(--font-headline);
+  font-weight: 900;
+  font-size: 22px;
+  color: var(--primary-fixed);
+  white-space: nowrap;
+}
+.price-row--featured {
+  background: rgba(195,244,0,0.05);
+}
+.price-row--featured td {
+  border-bottom: 1px solid rgba(195,244,0,0.2);
+}
+.price-tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 2px 8px;
   border: 1px solid var(--surface-variant);
-  padding: 32px;
-  display: flex;
-  flex-direction: column;
+  color: var(--on-surface-variant);
+  vertical-align: middle;
+  margin-left: 8px;
 }
-.price-card--featured {
-  border: 2px solid var(--primary-fixed);
-  box-shadow: 0 0 20px rgba(195,244,0,0.1);
-  position: relative;
-}
-@media (min-width: 768px) {
-  .price-card--featured { transform: translateY(-16px); }
-}
-.price-badge {
-  position: absolute;
-  top: 0;
-  right: 0;
+.price-tag--pop {
   background: var(--primary-fixed);
   color: var(--on-primary-fixed);
-  font-family: var(--font-body);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 4px 12px;
+  border-color: var(--primary-fixed);
 }
-.price-amount {
-  font-family: var(--font-headline);
-  font-size: 40px;
-  font-weight: 900;
-  color: var(--primary-fixed);
-  margin-bottom: 24px;
-}
-.price-list {
-  flex-grow: 1;
-  margin-bottom: 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.price-list li {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--on-surface-variant);
-  font-size: 18px;
-}
-.price-list .material-symbols-outlined {
-  color: var(--primary-fixed);
-  font-size: 20px;
-}
-.price-card button { width: 100%; font-size: 16px; }
 .price-note {
   margin-top: 32px;
   display: flex;
@@ -593,7 +625,7 @@ button { cursor: pointer; border: none; font: inherit; }
   padding-top: 8px;
 }
 .info-link {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 8px;
   color: var(--primary-fixed);
@@ -710,7 +742,6 @@ button { cursor: pointer; border: none; font: inherit; }
 /* ── Small Screen Overrides ── */
 @media (max-width: 480px) {
   .hero { min-height: 70vh; }
-  .price-amount { font-size: 32px; }
   .card { padding: 24px; }
   .section { padding: 64px 0; }
   .pricing-section { padding: 64px 0; }
@@ -765,7 +796,7 @@ button { cursor: pointer; border: none; font: inherit; }
   <div class="container hero-content">
     <h1 class="headline-xl">No Gimmicks.<br>Just Iron.</h1>
     <p class="hero-tagline">Old School Mindset.</p>
-    <p class="body-lg" style="color:var(--on-surface-variant);max-width:540px;margin-bottom:32px;">Bodyfit Kissamos is an authentic old-school bodybuilding gym in Kissamos, Chania, Crete. Fully equipped with heavy free weights, resistance machines, and air conditioning. Day passes from €10.</p>
+    <p class="body-lg" style="color:var(--on-surface-variant);max-width:540px;margin-bottom:32px;">Bodyfit Kissamos is an authentic old-school bodybuilding gym in Kissamos, Chania, Crete. Fully equipped with heavy free weights, resistance machines, and air conditioning. Day passes from €5.</p>
     <a href="#pricing" class="btn-primary">
       Join the Grind
       <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">arrow_forward</span>
@@ -821,41 +852,49 @@ button { cursor: pointer; border: none; font: inherit; }
 <section class="pricing-section" id="pricing">
   <div class="container">
     <h2 class="headline-lg section-title">Access Plans</h2>
-    <div class="grid-3">
-      <div class="price-card">
-        <h4 class="headline-md" style="color:var(--primary);margin-bottom:8px;">Day Pass</h4>
-        <div class="price-amount">€10</div>
-        <ul class="price-list">
-          <li><span class="material-symbols-outlined">check</span> Full floor access</li>
-          <li><span class="material-symbols-outlined">check</span> Free weights &amp; machines</li>
-        </ul>
-        <button class="btn-secondary">Select</button>
-      </div>
-      <div class="price-card price-card--featured">
-        <span class="price-badge">Most Popular</span>
-        <h4 class="headline-md" style="color:var(--primary);margin-bottom:8px;">Weekly Pass</h4>
-        <div class="price-amount">€35</div>
-        <ul class="price-list">
-          <li><span class="material-symbols-outlined">check</span> 7 consecutive days</li>
-          <li><span class="material-symbols-outlined">check</span> Perfect for travelers</li>
-          <li><span class="material-symbols-outlined">check</span> Locker usage</li>
-        </ul>
-        <button class="btn-primary" style="width:100%;font-size:16px;">Select</button>
-      </div>
-      <div class="price-card">
-        <h4 class="headline-md" style="color:var(--primary);margin-bottom:8px;">Monthly</h4>
-        <div class="price-amount">€55</div>
-        <ul class="price-list">
-          <li><span class="material-symbols-outlined">check</span> Unlimited access</li>
-          <li><span class="material-symbols-outlined">check</span> Priority support</li>
-          <li><span class="material-symbols-outlined">check</span> Nutrition advice</li>
-        </ul>
-        <button class="btn-secondary">Select</button>
-      </div>
+    <div class="price-table-wrap">
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th>Plan</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Day Pass</td>
+            <td>€5</td>
+          </tr>
+          <tr>
+            <td>Weekly <span class="price-tag">Travelers</span></td>
+            <td>€25</td>
+          </tr>
+          <tr class="price-row--featured">
+            <td>Monthly <span class="price-tag price-tag--pop">Popular</span></td>
+            <td>€40</td>
+          </tr>
+          <tr>
+            <td>2 Months</td>
+            <td>€70</td>
+          </tr>
+          <tr>
+            <td>3 Months</td>
+            <td>€100</td>
+          </tr>
+          <tr>
+            <td>6 Months</td>
+            <td>€190</td>
+          </tr>
+          <tr class="price-row--featured">
+            <td>Annual <span class="price-tag price-tag--pop">Best Value</span></td>
+            <td>€390</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     <div class="price-note">
       <span class="material-symbols-outlined">contactless</span>
-      <span>All major cards and NFC payments accepted at the desk.</span>
+      <span>Cash, cards, and NFC payments accepted at the desk.</span>
     </div>
   </div>
 </section>
@@ -910,7 +949,7 @@ button { cursor: pointer; border: none; font: inherit; }
       </div>
       <div class="faq-item">
         <h3>How much does a gym pass cost?</h3>
-        <p>A single day pass costs €10 with full floor access. Weekly passes are €35 (7 consecutive days with locker usage), and monthly memberships cost €55 with unlimited access and nutrition advice. All major cards and NFC payments accepted.</p>
+        <p>A day pass costs €5 with full floor access. Weekly passes are €25, monthly memberships €40, and annual memberships €390 for the best value. Longer plans also available: 2 months €70, 3 months €100, 6 months €190. Cash, cards, and NFC payments accepted at the desk.</p>
       </div>
       <div class="faq-item">
         <h3>What are the opening hours?</h3>
@@ -918,7 +957,7 @@ button { cursor: pointer; border: none; font: inherit; }
       </div>
       <div class="faq-item">
         <h3>Is Bodyfit Kissamos good for tourists?</h3>
-        <p>Yes, Bodyfit Kissamos is ideal for travelers visiting Crete who want to maintain their training routine. The popular weekly pass (€35) is designed specifically for tourists, offering 7 consecutive days of access with locker usage.</p>
+        <p>Yes, Bodyfit Kissamos is ideal for travelers visiting Crete who want to maintain their training routine. The weekly pass (€25) is designed specifically for tourists, offering 7 consecutive days of full access.</p>
       </div>
     </div>
   </div>

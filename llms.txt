@@ -5,9 +5,13 @@
 Bodyfit Kissamos is a dedicated bodybuilding and strength training gym located in the coastal town of Kissamos in western Crete. The gym is known for its raw, industrial atmosphere, heavy free weights, professional-grade machines, and fully air-conditioned training floor. It caters to both local athletes and tourists visiting Crete.
 
 ## Pricing
-- Day Pass: €10 — Full floor access, free weights and machines
-- Weekly Pass: €35 — 7 consecutive days, locker usage, ideal for travelers
-- Monthly Membership: €55 — Unlimited access, priority support, nutrition advice
+- Day Pass: €5
+- Weekly Pass: €25 — ideal for travelers
+- Monthly: €40
+- 2 Months: €70
+- 3 Months: €100
+- 6 Months: €190
+- Annual: €390 — best value
 - Payment: Cash, credit/debit cards, NFC (Apple Pay, Google Pay)
 
 ## Hours
