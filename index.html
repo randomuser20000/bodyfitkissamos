@@ -457,6 +457,8 @@ button { cursor: pointer; border: none; font: inherit; }
   display: flex;
   gap: 32px;
   margin-top: 48px;
+  padding-top: 48px;
+  border-top: 1px solid var(--surface-variant);
   flex-wrap: wrap;
 }
 .hero-badge {
@@ -732,7 +734,7 @@ button { cursor: pointer; border: none; font: inherit; }
 
 /* ── Small Screen Overrides ── */
 @media (max-width: 480px) {
-  .hero { min-height: 70vh; }
+  .hero { min-height: 70vh; padding-top: 80px; }
   .card { padding: 24px; }
   .section { padding: 64px 0; }
   .pricing-section { padding: 64px 0; }
@@ -914,6 +916,7 @@ button { cursor: pointer; border: none; font: inherit; }
       <div class="fuel-card-gradient"></div>
       <img class="fuel-card-bg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjL-h8PcpLz_wSafTvGUNubeke5BQaZW5iiWno8K4k7DvdT3-Z-L2cv2-7gSi8ioOsG3C6i2zdLQhMR7xN7hhT5S7-okaJ-JG94brMTgMfqw9iTdZi0CdQxNNcxUdJAL6zKxKjft2VSel_aEt3pD7WzGAXWv4repPAUGQvlCbY3FOn64s_lQHJllZdw8FCfiwLDcowgQnCGPyArgcorwekeu46zhiqVdgcVHBflXxjP-S8aH5SMyHunc_FnV74TNyxyOnQFmcwQo0b" alt="Supplement station at Bodyfit Kissamos" width="800" height="600" loading="lazy">
       <div class="fuel-card-content" style="padding:32px;">
+        <span class="material-symbols-outlined" style="color:var(--primary-fixed);font-size:36px;margin-bottom:16px;">local_drink</span>
         <h2 class="headline-md section-title" style="margin-bottom:32px;">Fuel Station</h2>
         <p class="body-lg" style="color:var(--on-surface-variant);max-width:380px;">Running low? We stock a selection of premium whey, pre-workouts, and BCAAs on-site. Grab what you need at the desk.</p>
       </div>
