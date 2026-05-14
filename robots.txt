@@ -1,0 +1,27 @@
+User-agent: *
+Allow: /
+
+# AI Search Crawlers — explicitly allowed
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Training-only crawlers — optionally block
+User-agent: CCBot
+Disallow: /
+
+Sitemap: https://bodyfikissamos.com/sitemap.xml

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BODYFIT KISSAMOS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&amp;family=Inter:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#353534",
+                        "surface-container-high": "#2a2a2a",
+                        "secondary-container": "#ff5e07",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-bright": "#3a3939",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "on-surface-variant": "#c4c9ac",
+                        "inverse-primary": "#506600",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "on-surface": "#e5e2e1",
+                        "secondary-fixed": "#ffdbce",
+                        "on-primary-container": "#556d00",
+                        "primary-container": "#c3f400",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed": "#e5e2e1",
+                        "surface-dim": "#131313",
+                        "surface-container-lowest": "#0e0e0e",
+                        "primary": "#ffffff",
+                        "on-secondary-fixed-variant": "#802a00",
+                        "secondary-fixed-dim": "#ffb59a",
+                        "surface-container-low": "#1c1b1b",
+                        "on-secondary-fixed": "#370e00",
+                        "tertiary-container": "#e5e2e1",
+                        "on-primary-fixed": "#161e00",
+                        "secondary": "#ffb59a",
+                        "tertiary": "#ffffff",
+                        "background": "#131313",
+                        "on-secondary-container": "#531900",
+                        "outline": "#8e9379",
+                        "on-secondary": "#5a1b00",
+                        "on-primary": "#283500",
+                        "surface-container": "#201f1f",
+                        "inverse-on-surface": "#313030",
+                        "primary-fixed": "#c3f400",
+                        "on-primary-fixed-variant": "#3c4d00",
+                        "on-background": "#e5e2e1",
+                        "surface": "#131313",
+                        "surface-tint": "#abd600",
+                        "surface-container-highest": "#353534",
+                        "on-tertiary": "#313030",
+                        "on-tertiary-container": "#656464",
+                        "on-error-container": "#ffdad6",
+                        "on-error": "#690005",
+                        "error-container": "#93000a",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "outline-variant": "#444933",
+                        "primary-fixed-dim": "#abd600"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-desktop": "48px",
+                        "container-max-width": "1280px",
+                        "margin-mobile": "16px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-xl": ["Montserrat"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "800" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "headline-xl": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "900" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .noise-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.03;
+            background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)"/%3E%3C/svg%3E');
+        }
+        body {
+            background-color: #0A0A0A; /* Deepest black for brutalist feel beyond surface */
+            color: #e5e2e1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-lg antialiased relative">
+<div class="noise-overlay"></div>
+<!-- TopAppBar -->
+<nav class="bg-background dark:bg-background text-primary dark:text-primary w-full sticky top-0 z-50 border-b-2 border-surface-variant dark:border-surface-variant">
+<div class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-20">
+<div class="font-headline-md text-headline-md font-black tracking-tighter text-primary-fixed dark:text-primary-fixed uppercase">
+                BODYFIT KISSAMOS
+            </div>
+<ul class="hidden md:flex gap-gutter items-center font-headline-md text-headline-md uppercase">
+<li><a class="text-on-surface hover:text-primary-fixed transition-colors" href="#">Training</a></li>
+<li><a class="text-on-surface hover:text-primary-fixed transition-colors" href="#">Equipment</a></li>
+<li><a class="text-on-surface hover:text-primary-fixed transition-colors" href="#">Pricing</a></li>
+<li><a class="text-on-surface hover:text-primary-fixed transition-colors" href="#">Contact</a></li>
+</ul>
+<button class="bg-primary-fixed text-on-primary-fixed font-headline-md text-headline-md uppercase px-6 py-3 border-b-2 border-black hover:bg-surface-tint transition-all duration-200 active:scale-95">
+                Join Now
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-[819px] flex items-center border-b-2 border-surface-variant bg-surface-dim overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent z-10"></div>
+<img alt="Gym Interior" class="absolute inset-0 w-full h-full object-cover grayscale opacity-40 mix-blend-overlay" data-alt="A raw, old-school bodybuilding gym interior with heavy iron plates and robust equipment. Dramatic, high-contrast lighting cutting through a dark, industrial space. The aesthetic is brutalist, featuring deep blacks and charcoal tones, punctuated by the metallic sheen of dumbbells and barbells. The mood is intense, focused, and professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAo39WNUkYFs-2epbhTUM62BxZzBTVfCpMTaWuAAY59OT1vo3DRdoPVG130Q1527IZPZkgszMI-Xqnm4hT8xmi_f95lwmXocCFkWnXgB_jrMdA-V4bJo-ena_cRb4Ad0iBzb3J2PV43RailLtvnSnZDy3ko6afHMuCDudfjTHZKxmq-lyEn_4DS1YOcRNzOxNSTf9bB0E0HXUvCuW-WLoYskaI-7hgGftL2Jey5kWXv5HY-k1y_5HQkpd7ZCIRbMAGqyBx0Z_NEgQZq"/>
+<div class="relative z-20 max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop w-full text-left">
+<h1 class="font-headline-xl text-headline-xl text-primary uppercase mb-unit max-w-3xl">
+                THE HIDDEN GEM OF CHANIA.
+            </h1>
+<p class="font-headline-md text-headline-md text-primary-fixed uppercase mb-8 tracking-wide">
+                NO GIMMICKS, JUST IRON.
+            </p>
+<button class="bg-primary-fixed text-on-primary-fixed font-headline-lg text-headline-lg-mobile uppercase px-8 py-4 border-b-4 border-black hover:bg-surface-tint transition-all duration-200 active:scale-95 inline-flex items-center gap-2">
+                Join the Grind
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- Features / Atmosphere -->
+<section class="py-24 max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Feature 1 -->
+<div class="bg-surface-container-high border border-surface-variant p-8 flex flex-col items-start hover:border-primary-fixed transition-colors duration-300">
+<span class="material-symbols-outlined text-primary-fixed text-5xl mb-4">fitness_center</span>
+<h3 class="font-headline-md text-headline-md text-primary uppercase mb-2">Old School Vibes</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                    Authentic bodybuilding atmosphere. Heavy dumbbells, raw iron, and an environment built for serious lifters who respect the work.
+                </p>
+</div>
+<!-- Feature 2 -->
+<div class="bg-surface-container-high border border-surface-variant p-8 flex flex-col items-start hover:border-primary-fixed transition-colors duration-300">
+<span class="material-symbols-outlined text-primary-fixed text-5xl mb-4">ac_unit</span>
+<h3 class="font-headline-md text-headline-md text-primary uppercase mb-2">Clean &amp; Cooled</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                    Immaculately maintained equipment and a fully air-conditioned floor. Train hard without compromising on hygiene or comfort.
+                </p>
+</div>
+<!-- Feature 3 -->
+<div class="bg-surface-container-high border border-surface-variant p-8 flex flex-col items-start hover:border-primary-fixed transition-colors duration-300">
+<span class="material-symbols-outlined text-primary-fixed text-5xl mb-4">sports_martial_arts</span>
+<h3 class="font-headline-md text-headline-md text-primary uppercase mb-2">Expert Spotting</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                    Supportive management and a community of dedicated athletes. Need a lift-off? You'll find experienced hands ready to help.
+                </p>
+</div>
+</div>
+</section>
+<!-- Pricing -->
+<section class="py-24 bg-surface-container-low border-t-2 border-surface-variant">
+<div class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<h2 class="font-headline-lg text-headline-lg text-primary uppercase mb-12 border-l-4 border-primary-fixed pl-4">Access Plans</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Day Pass -->
+<div class="bg-surface-container-high border border-surface-variant p-8 flex flex-col">
+<h4 class="font-headline-md text-headline-md text-primary uppercase mb-2">Day Pass</h4>
+<div class="text-4xl font-black text-primary-fixed mb-6 font-headline-lg">€10</div>
+<ul class="mb-8 space-y-4 font-body-lg text-on-surface-variant flex-grow">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary-fixed">check</span> Full floor access</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary-fixed">check</span> Free weights &amp; machines</li>
+</ul>
+<button class="w-full bg-transparent border-2 border-primary text-primary font-headline-md text-headline-md uppercase py-3 hover:bg-surface-bright transition-colors">Select</button>
+</div>
+<!-- Weekly Pass (Featured) -->
+<div class="bg-surface-container-high border-2 border-primary-fixed p-8 flex flex-col relative transform md:-translate-y-4 shadow-[0_0_20px_rgba(195,244,0,0.1)]">
+<div class="absolute top-0 right-0 bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm px-3 py-1 uppercase tracking-widest">Most Popular</div>
+<h4 class="font-headline-md text-headline-md text-primary uppercase mb-2">Weekly Pass</h4>
+<div class="text-4xl font-black text-primary-fixed mb-6 font-headline-lg">€35</div>
+<ul class="mb-8 space-y-4 font-body-lg text-on-surface-variant flex-grow">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary-fixed">check</span> 7 consecutive days</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary-fixed">check</span> Perfect for travelers</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary-fixed">check</span> Locker usage</li>
+</ul>
+<button class="w-full bg-primary-fixed text-on-primary-fixed font-headline-md text-headline-md uppercase py-3 border-b-2 border-black hover:bg-surface-tint transition-colors active:scale-95">Select</button>
+</div>
+<!-- Monthly -->
+<div class="bg-surface-container-high border border-surface-variant p-8 flex flex-col">
+<h4 class="font-headline-md text-headline-md text-primary uppercase mb-2">Monthly</h4>
+<div class="text-4xl font-black text-primary-fixed mb-6 font-headline-lg">€55</div>
+<ul class="mb-8 space-y-4 font-body-lg text-on-surface-variant flex-grow">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary-fixed">check</span> Unlimited access</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary-fixed">check</span> Priority support</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary-fixed">check</span> Nutrition advice</li>
+</ul>
+<button class="w-full bg-transparent border-2 border-primary text-primary font-headline-md text-headline-md uppercase py-3 hover:bg-surface-bright transition-colors">Select</button>
+</div>
+</div>
+<div class="mt-8 flex items-center justify-center gap-4 text-on-surface-variant font-body-lg">
+<span class="material-symbols-outlined text-primary-fixed">contactless</span>
+<span>All major cards and NFC payments accepted at the desk.</span>
+</div>
+</div>
+</section>
+<!-- Info & Supplements -->
+<section class="py-24 max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Hours & Location -->
+<div class="bg-surface-container-high border border-surface-variant p-8">
+<h2 class="font-headline-md text-headline-md text-primary uppercase mb-8 border-l-4 border-primary-fixed pl-4">Operations</h2>
+<div class="mb-8">
+<h3 class="font-label-sm text-label-sm text-primary-fixed uppercase mb-2">Hours</h3>
+<div class="grid grid-cols-2 gap-4 font-body-lg text-on-surface">
+<div>Mon - Fri</div>
+<div class="text-right">10:00 - 22:00</div>
+<div class="border-t border-surface-variant pt-2">Saturday</div>
+<div class="border-t border-surface-variant pt-2 text-right">10:00 - 21:00</div>
+<div class="border-t border-surface-variant pt-2 text-on-surface-variant">Sunday</div>
+<div class="border-t border-surface-variant pt-2 text-right text-on-surface-variant">Closed for recovery</div>
+</div>
+</div>
+<div>
+<h3 class="font-label-sm text-label-sm text-primary-fixed uppercase mb-2">Location</h3>
+<p class="font-body-lg text-on-surface mb-4">Kissamos, Chania, Crete</p>
+<a class="inline-flex items-center gap-2 text-primary-fixed hover:text-surface-tint font-headline-md text-body-md uppercase border-b border-primary-fixed pb-1 transition-colors" href="#">
+<span class="material-symbols-outlined">map</span>
+                    Open in Google Maps
+                </a>
+</div>
+</div>
+<!-- Supplements -->
+<div class="relative bg-surface-container-high border border-surface-variant p-8 overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-high to-transparent z-10"></div>
+<img alt="Supplements" class="absolute inset-0 w-full h-full object-cover opacity-30 grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="A close-up shot of premium protein powder tubs and shaker bottles arranged neatly on a dark, textured gym counter. The lighting is dramatic and moody, emphasizing the bold labels and structural shapes of the containers. The color palette features deep charcoal backgrounds with striking electric orange and stark white accents, fitting an industrial brutalist aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjL-h8PcpLz_wSafTvGUNubeke5BQaZW5iiWno8K4k7DvdT3-Z-L2cv2-7gSi8ioOsG3C6i2zdLQhMR7xN7hhT5S7-okaJ-JG94brMTgMfqw9iTdZi0CdQxNNcxUdJAL6zKxKjft2VSel_aEt3pD7WzGAXWv4repPAUGQvlCbY3FOn64s_lQHJllZdw8FCfiwLDcowgQnCGPyArgcorwekeu46zhiqVdgcVHBflXxjP-S8aH5SMyHunc_FnV74TNyxyOnQFmcwQo0b"/>
+<div class="relative z-20 h-full flex flex-col justify-end">
+<span class="material-symbols-outlined text-primary-fixed text-4xl mb-4">local_drink</span>
+<h2 class="font-headline-md text-headline-md text-primary uppercase mb-2">Fuel Station</h2>
+<p class="font-body-lg text-on-surface-variant max-w-sm">
+                    Running low? We stock a selection of premium whey, pre-workouts, and BCAAs on-site. Grab what you need at the desk.
+                </p>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest text-primary dark:text-primary w-full py-12 border-t-2 border-surface-variant">
+<div class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="font-headline-md text-headline-md font-black text-primary uppercase">
+                BODYFIT KISSAMOS
+            </div>
+<ul class="flex flex-wrap justify-center gap-6 font-body-md text-body-md">
+<li><a class="text-on-surface-variant hover:text-primary-fixed underline transition-opacity hover:opacity-80" href="#">Instagram</a></li>
+<li><a class="text-on-surface-variant hover:text-primary-fixed underline transition-opacity hover:opacity-80" href="#">Facebook</a></li>
+<li><a class="text-on-surface-variant hover:text-primary-fixed underline transition-opacity hover:opacity-80" href="#">Google Maps</a></li>
+<li><a class="text-on-surface-variant hover:text-primary-fixed underline transition-opacity hover:opacity-80" href="#">Privacy Policy</a></li>
+</ul>
+<div class="font-body-md text-body-md text-on-surface-variant">
+                © 2024 BODYFIT KISSAMOS. NO GIMMICKS. JUST IRON.
+            </div>
+</div>
+</footer>
+</body></html>
